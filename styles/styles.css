@@ -1,0 +1,685 @@
+/* COLORS:
+White, #ffffff, 255,255,255
+Dark brown, #1d0303, 29,3,3
+Dried blood, #500801, 80,8,1
+Poop, #815600, 129,86,0 
+ */
+
+/* FOCUS STATE PLEASE!! */
+
+/* ****************************************************************** */
+/* GLOBAL STYLING */
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+.button,
+input[type="submit"] {
+    font-family: 'Petit Formal Script', cursive;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+.button,
+input[type="submit"] {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 29px;
+    background-color: #1d0303;
+    border: none;
+    padding: 15px 25px;
+}
+
+.button {
+    display: inline-block;
+}
+
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 29px;
+    color: white;
+    margin: 0;
+}
+
+p {
+    letter-spacing: 0.2px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  padding: 10px 15px;
+  color: #1d0303;
+}
+
+.skip-link:focus {
+  left: 50%;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* ****************************************************************** */
+/* NAVIGATION STYLING */
+.main-nav {
+    background: #815600;
+    padding: 30px 0;
+}
+.nav-bar li {
+    float: left;
+    margin-right: 35px;
+}
+
+.hamburger,
+.exit-responsive {
+	display: none;
+}
+
+.show.nav-bar,
+.show.social-media-icons {
+	display: block;
+}
+
+
+
+
+
+/* ****************************************************************** */
+/* HEADER STYLING */
+header {
+    background: #815600;
+    padding: 0 0 40px 0;
+    position: relative;
+}
+
+h1,
+.hero-image {
+    width: 50%;
+    float: left;
+}
+
+h1 {
+    text-align: right;
+    line-height: 94.3px;
+    font-size: 4.5rem;
+    margin-top: 150px;
+    padding-right: 40px;
+}
+
+.social-media-icons {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+
+.social-media-icons li {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+
+
+
+/* ****************************************************************** */
+/* ABOUT */
+section.about {
+    background: #500801;
+    padding: 100px 0;
+}
+
+
+.square-photo {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.square-photo img {
+    object-fit: none;
+    width: 130%;
+    height: 130%;
+    object-position: 30% 500%;
+   
+}
+
+.about-content p {
+    margin: 25px 0;
+}
+
+.about-content .button {
+    margin: 6px 0;
+}
+
+
+
+
+
+/* ****************************************************************** */
+/* GALLERY */
+
+.gallery {
+    background-color: #815600;
+    padding-bottom: 150px;
+}
+
+.gallery h2 {
+    text-align: center;
+    padding: 75px 0;
+}
+
+.gallery-photo {
+    width: calc((100% / 3) - 25px);
+    float: left;
+}
+
+.gallery-photo-1 {
+    margin-right: 25px;
+}
+
+.gallery-photo-2 {
+    margin: 0 12.5px;
+}
+
+.gallery-photo-3 {  
+    margin-left: 25px;
+}
+
+
+/* ****************************************************************** */
+/* MORE-CONTENT */
+
+.more-content {
+    background: #500801;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.far {
+    color: #ffffff;
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.link {
+    float: left;
+    width: calc(100% / 3);
+}
+
+
+/* ****************************************************************** */
+/* BLOG */
+
+.blog {
+    background: #815600;
+}
+
+.left-content {
+    margin: 90px 0;
+    padding: 35px;
+    width: 500px;
+    float: left;
+}
+
+.left-content p {
+    margin: 35px 0;
+}
+
+.right-photo {
+    float: right;
+}
+
+.left-photo {
+    float: left;
+}
+
+.right-content {
+    margin: 100px 0 0;
+    padding: 40px;
+    width: 580px;
+    float: right;
+    
+}
+
+.right-content p {
+    margin: 35px 0;
+}
+
+
+/* ****************************************************************** */
+/* FOOTER */
+
+.footer-top {
+    background: #500801;
+}
+
+.footer-nav,
+.subscribe,
+.contact {
+    float: left;
+}
+
+.footer-nav {
+    width: 25%;
+    padding: 140px 0 70px;
+
+}
+
+.subscribe {
+    width: 50%;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.subscribe p {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.subscribe input[type="text"] {
+    border: none;
+    padding: 17px 10px 15px 10px;
+    width: 400px;
+}
+
+.contact {
+    width: 25%;
+    text-align: right;
+    padding: 120px 0 70px;
+}
+
+.contact h3 {
+    padding-bottom: 10px;
+}
+
+.contact .divider {
+    border-left: 2px solid white;
+    position: relative;
+    left: 4px;
+    height: 3px;
+}
+
+.footer-bottom {
+    background: #1d0303;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+/* ****************************************************************** */
+/* MEDIA QUERIES */
+
+@media (max-width: 2000px) {
+}
+
+
+@media (max-width: 1680px) {
+
+    /* .photo {
+        box-shadow: none;
+
+    } */
+
+}
+
+@media (max-width: 1590px) {
+    .content {
+        background: #815600;
+        box-shadow: -5px 5px 15px #1d0303;
+        float: none;
+        position: absolute;
+    }
+
+    .right-content {
+        right: 180px;
+
+    }
+    .blog-top,
+    .blog-bottom {
+        position: relative;
+    }
+}
+
+@media (max-width: 1330px) {
+/* ************** HEADER *************** */
+
+    .hero-image {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    h1 {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+        text-align: right;
+    }
+
+/* ************** BLOG *************** */
+    .photo {
+        float: none;
+    }
+    .photo img {
+        width: 100%;
+    }
+
+    .left-content {
+        top: 280px;
+    }
+    .right-content {
+        bottom: 100px;
+        right: 60px;
+    }
+
+    .content { 
+        padding: 20px;
+        width: 900px;
+        background: linear-gradient(to bottom, rgba(129,86,0, 0.8), rgba(129,86,0,0.8));
+    }
+    .content p {
+        margin: 15px 0;
+    }
+
+/* ************** FOOTER *************** */
+    .footer-nav {
+        width: 100%;
+        padding: 60px 0;
+    }
+    .footer-nav li {
+        float: left;
+        width: 25%;
+    }
+
+    .footer-nav a {
+        text-transform: capitalize;
+        font-size: 1.25rem;
+    }
+    .footer-nav li {
+        text-align: center;
+    } 
+
+    .subscribe {
+        width: 65%;
+        padding-top: 0;
+    }
+
+    .contact {
+        width: 35%;
+        padding-top: 20px;
+    }
+
+
+}
+
+@media (max-width: 1029px) {
+/* ************** HEADER *************** */
+
+
+
+
+/* ************** ABOUT *************** */
+    .about-content p {
+        line-height: 35px;
+        font-size: 1.10rem;
+    }
+
+    .about h2 {
+        font-size: 2.3rem;
+    }
+
+
+
+/* ************** GALLERY *************** */
+    .gallery-photo-2 {
+        display: none;
+    }
+    .gallery-photo-1 {
+        float: right;
+        width: calc(50% - 6px);
+        margin: 0;
+        margin-left: 6px;
+    }
+    .gallery-photo-3 {
+        width: calc(50% - 6px);
+        margin: 0;
+        margin-right: 6px;
+    }
+
+/* ************** MORE CONTENT *************** */
+    .link {
+        float: none;
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .more-content {
+        padding: 60px 0 70px 0;
+    }
+
+
+
+/* ************** BLOG *************** */
+    .content {
+        position: static;
+        box-shadow: none;
+        margin: 0;
+        padding: 50px 0;
+        width: auto;
+    }
+
+    .content p { 
+        line-height: 35px;
+        font-size: 1.10rem;
+        margin: 27.5px 0; 
+    }
+
+    .content h2 {
+        font-size: 2.3rem;
+    }
+
+/* ************** FOOTER *************** */
+    .subscribe,
+    .contact {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .subscribe input[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+        padding: 20px 40px;
+        font-size: 1.50rem;
+    }
+
+    .subscribe input[type="text"] {
+        width: 70%;
+    }
+
+    .subscribe p,
+    .contact p {
+        font-size: 1.10rem;
+    }
+
+    .contact {
+        padding: 50px 0;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+/* ************** HEADER/NAV *************** */
+h1 {
+    font-size: 3.5rem;
+    line-height: 85px;
+}
+
+.main-nav {
+    padding: 20px 0;
+}
+.hero-image {
+    position: relative;
+    right: 100px;
+    width: 114%;
+    padding-bottom: 10px;
+    
+}
+
+.hamburger,
+.exit-responsive {
+    display: block;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.nav-bar,
+.social-media-icons {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.99);
+		color: white;
+    }
+
+
+
+/* ************** ABOUT *************** */
+section.about { 
+    padding: 60px 0;
+}
+
+.about h2 {
+    margin-top: 40px;
+}
+
+.square-photo {
+    float: none;
+    width: 100%;
+    }
+
+.square-photo img {
+   object-position: 20% 20%;
+   object-fit: cover;
+   height: 130%;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content .button {
+    margin-top: 30px;
+}
+
+/* ************** GALLERY *************** */
+    .gallery {
+        padding-bottom: 120px;
+    }
+
+    .gallery h2 {
+        padding: 55px 0;
+        font-size: 2.3rem;
+    
+    }
+
+/* ************** MORE-CONTENT *************** */
+    .more-content {
+        padding: 17px 0;
+    }
+    .link i {
+        font-size: 3.25rem;
+    }
+
+/* ************** BLOG *************** */
+    .photo {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .photo img{
+        width: 100%;
+        margin: -9% 0;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+/* ************** FOOTER *************** */
+    .subscribe input[type="text"] {
+        width: 100%;
+    }
+   
+}
+
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 65px;
+    }
+
+    html {
+        font-size: 100%;
+    }
+}
