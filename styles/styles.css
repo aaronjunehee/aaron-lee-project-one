@@ -1,11 +1,10 @@
-/* COLORS:
-White, #ffffff, 255,255,255
-Dark brown, #1d0303, 29,3,3
-Dried blood, #500801, 80,8,1
-Poop, #815600, 129,86,0 
- */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
-/* FOCUS STATE PLEASE!! */
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 /* ****************************************************************** */
 /* GLOBAL STYLING */
@@ -90,7 +89,7 @@ li {
   top: 5px;
   z-index: 999;
   background: white;
-  padding: 10px 15px;
+  padding: 12.5px 40px;
   color: #1d0303;
 }
 
@@ -117,11 +116,19 @@ li {
 .main-nav {
     background: #815600;
     padding: 30px 0;
+    font-size: 1.25rem;
 }
 .nav-bar li {
     float: left;
-    margin-right: 35px;
+    margin-right: 45px;
 }
+
+.nav-bar a:hover,
+.social-media-icons a:hover,
+footer a:hover {
+    color: #1d0303;
+}
+
 
 .hamburger,
 .exit-responsive {
@@ -150,6 +157,7 @@ h1,
     width: 50%;
     float: left;
 }
+
 
 h1 {
     text-align: right;
@@ -187,6 +195,7 @@ section.about {
     height: 300px;
     margin-right: 40px;
     overflow: hidden;
+    background-color: white;
 }
 
 .square-photo img {
@@ -225,6 +234,7 @@ section.about {
 .gallery-photo {
     width: calc((100% / 3) - 25px);
     float: left;
+    background-color: white;
 }
 
 .gallery-photo-1 {
@@ -238,6 +248,12 @@ section.about {
 .gallery-photo-3 {  
     margin-left: 25px;
 }
+
+.gallery-photo a:hover {
+    opacity: 0.8;
+}
+
+
 
 
 /* ****************************************************************** */
@@ -258,6 +274,10 @@ section.about {
 .link {
     float: left;
     width: calc(100% / 3);
+}
+
+.link h3:hover {
+    color: rgb(182, 182, 182);
 }
 
 
@@ -281,10 +301,12 @@ section.about {
 
 .right-photo {
     float: right;
+    background-color: black;
 }
 
 .left-photo {
     float: left;
+    background-color: lightblue;
 }
 
 .right-content {
@@ -297,6 +319,10 @@ section.about {
 
 .right-content p {
     margin: 35px 0;
+}
+
+a.button:hover {
+    background-color: rgb(29, 29, 29);
 }
 
 
@@ -330,10 +356,15 @@ section.about {
     margin-bottom: 10px;
 }
 
-.subscribe input[type="text"] {
+.subscribe input[type="email"] {
     border: none;
     padding: 17px 10px 15px 10px;
     width: 400px;
+    font-size: 1.20rem;
+}
+
+input[type="email"]:focus {
+    border: 3px solid red;
 }
 
 .contact {
@@ -359,24 +390,15 @@ section.about {
     padding: 10px 0;
 }
 
+input[type="submit"]:hover {
+    background-color: rgb(29, 29, 29);
+}
 
 
 
 /* ****************************************************************** */
 /* MEDIA QUERIES */
 
-@media (max-width: 2000px) {
-}
-
-
-@media (max-width: 1680px) {
-
-    /* .photo {
-        box-shadow: none;
-
-    } */
-
-}
 
 @media (max-width: 1590px) {
     .content {
@@ -403,6 +425,7 @@ section.about {
         width: 100%;
         padding-bottom: 20px;
     }
+    
     h1 {
         float: none;
         width: 100%;
@@ -464,15 +487,9 @@ section.about {
         padding-top: 20px;
     }
 
-
 }
 
 @media (max-width: 1029px) {
-/* ************** HEADER *************** */
-
-
-
-
 /* ************** ABOUT *************** */
     .about-content p {
         line-height: 35px;
@@ -500,6 +517,11 @@ section.about {
         margin: 0;
         margin-right: 6px;
     }
+
+    .gallery-photo img {
+        width: 100%;
+    }
+
 
 /* ************** MORE CONTENT *************** */
     .link {
@@ -533,6 +555,8 @@ section.about {
         font-size: 2.3rem;
     }
 
+
+
 /* ************** FOOTER *************** */
     .subscribe,
     .contact {
@@ -548,7 +572,7 @@ section.about {
         font-size: 1.50rem;
     }
 
-    .subscribe input[type="text"] {
+    .subscribe input[type="email"] {
         width: 70%;
     }
 
@@ -564,6 +588,8 @@ section.about {
 
 }
 
+
+
 @media (max-width: 800px) {
 /* ************** HEADER/NAV *************** */
 h1 {
@@ -574,12 +600,12 @@ h1 {
 .main-nav {
     padding: 20px 0;
 }
+
 .hero-image {
     position: relative;
     right: 100px;
     width: 114%;
     padding-bottom: 10px;
-    
 }
 
 .hamburger,
@@ -598,7 +624,7 @@ h1 {
 		right: 0;
 		bottom: 0;
 		background: rgba(0,0,0,0.99);
-		color: white;
+        color: white;
     }
 
 
@@ -618,9 +644,9 @@ section.about {
     }
 
 .square-photo img {
-   object-position: 20% 20%;
+   object-position: 20% 50%;
    object-fit: cover;
-   height: 130%;
+   height: 140%;
 }
 
 .about-content {
@@ -630,6 +656,7 @@ section.about {
 .about-content .button {
     margin-top: 30px;
 }
+
 
 /* ************** GALLERY *************** */
     .gallery {
@@ -666,14 +693,15 @@ section.about {
     }
 
 /* ************** FOOTER *************** */
-    .subscribe input[type="text"] {
+    .subscribe input[type="email"] {
         width: 100%;
+        text-align: center;
     }
    
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     h1 {
         font-size: 3rem;
         line-height: 65px;
